@@ -50,7 +50,7 @@ public class CustomListTest {
         City city2 = new City("Toronto", "Ontario");
 
         // Add city1 to the cityList
-        list.add(city1);
+        list.addCity(city1);
 
         // Test if city1 is in the list (should be true)
         assertEquals(true,list.hasCity(city1), "CityList should contain Edmonton");
