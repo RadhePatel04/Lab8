@@ -59,6 +59,10 @@ public class CustomListTest {
         assertEquals(false, list.hasCity(city2), "CityList should not contain Toronto");
     }
 
+    /**
+     * create 1 city
+     * delete it and check count
+     */
     @Test
     void testDeleteCity(){
         list = MockCityList();
@@ -70,6 +74,12 @@ public class CustomListTest {
         assertEquals(false, list.hasCity(city1));
     }
 
+    /**
+     * check count
+     * add a city, check count
+     * add another city, check count
+     * delete city, check count
+     */
     @Test
     void testCountCities() {
         list = MockCityList();
