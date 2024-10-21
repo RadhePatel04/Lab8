@@ -36,4 +36,26 @@ public class CustomListTest {
         list.addCity(new City("Estevan", "SK"));
         assertEquals(list.getCount(),listSize + 1);
     }
+
+    /**
+     * creates 2 new cities
+     * adds one city and checks
+     * if both cities are in the list
+     */
+    @Test
+    void testHasCity() {
+        // Initialize CityList with a few cities
+        list = MockCityList();
+        City city1 = new City("Calgary", "Alberta");
+        City city2 = new City("Toronto", "Ontario");
+
+        // Add city1 to the cityList
+        list.add(city1);
+
+        // Test if city1 is in the list (should be true)
+        assertEquals(true,list.hasCity(city1), "CityList should contain Edmonton");
+
+        // Test if city2 is not in the list (should be false)
+        assertEquals(false, list.hasCity(city2), "CityList should not contain Toronto");
+    }
 }
