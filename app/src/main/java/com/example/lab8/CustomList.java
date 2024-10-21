@@ -62,11 +62,24 @@ public class CustomList extends ArrayAdapter<City> {
         cities.add(city);
     }
 
+    /**
+     * returns true if the city is in the list
+     * @param city
+     * This is a candidate city to check for
+     * @return
+     * Return true if city is in list
+     */
     public boolean hasCity(City city) {
         return cities.contains(city);
     }
-
+    /**
+     * This deletes the city from the list if the city exists
+     * @param city
+     * This is the candidate city to delete
+     */
     public void delete(City city) {
-
+        if (cities.contains(city)) {
+            cities.remove(city);
+        }
     }
 }
